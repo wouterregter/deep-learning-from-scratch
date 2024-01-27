@@ -40,20 +40,15 @@ class DataLoaderScratch:
             yield X_batch, y_batch
 
 class SGDScratch:
-    def __init__(self, parameters, lr=0.01, weight_decay=0):
+    def __init__(self, parameters, lr=0.01):
         self.parameters = parameters
         self.lr = lr
-        self.weight_decay = weight_decay
 
     def step(self):
         with torch.no_grad():
             # Update parameters (gradient descent)
             for param in self.parameters:
-                if param.grad is not None:
-                    # Apply weight decay to the parameter
-                    param.data -= self.weight_decay * param.data
-                    # Update parameter using gradient
-                    param.data -= self.lr * param.grad
+                param -= self.lr * param.grad
 
     def zero_grad(self):
         for param in self.parameters:
