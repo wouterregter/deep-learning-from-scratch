@@ -58,7 +58,7 @@ class TrainerScratch:
 
             print(f"Epoch {epoch+1}/{num_epochs}, Training Loss: {train_loss:.4f}, Validation Loss: {val_loss:.4f}")
             for name, value in val_metrics.items():
-                print(f"{name}: {value:.4f}")
+                print(f"Validation {name}: {value:.4f}")
 
             # Reset custom metrics for next epoch
             for metric in self.custom_metrics.values():
