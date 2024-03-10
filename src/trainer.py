@@ -1,7 +1,7 @@
 import torch
 import matplotlib.pyplot as plt
 
-class TrainerScratch:
+class Trainer:
     def __init__(self, model, train_dataloader, val_dataloader, optimizer, criterion, custom_metrics=None):
         self.model = model
         self.train_dataloader = train_dataloader

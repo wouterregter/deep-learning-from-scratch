@@ -1,6 +1,6 @@
 import numpy as np
 
-class DataLoaderScratch:
+class DataLoader:
     def __init__(self, X, y, batch_size=64, shuffle=True):
         """
         Custom DataLoader for batching and iterating over a dataset.

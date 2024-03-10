@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 
-class LinearRegressionScratch(nn.Module):
+class LinearRegression(nn.Module):
     def __init__(self, in_features):
         super().__init__()
         self.w = torch.randn(in_features, 1, requires_grad=True)
@@ -14,7 +14,7 @@ class LinearRegressionScratch(nn.Module):
     def parameters(self):
         return [self.w, self.b]
     
-class LogisticRegressionScratch(nn.Module):
+class LogisticRegression(nn.Module):
     def __init__(self, in_features, num_classes):
         super().__init__()
         self.num_classes = num_classes

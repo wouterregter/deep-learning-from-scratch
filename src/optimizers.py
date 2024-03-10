@@ -1,6 +1,6 @@
 import torch
 
-class SGDScratch:
+class SGD:
     def __init__(self, parameters, lr=0.01):
         self.parameters = parameters
         self.lr = lr

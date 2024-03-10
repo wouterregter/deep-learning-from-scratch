@@ -1,6 +1,6 @@
 import torch
 
-class AccuracyScratch:
+class Accuracy:
     def __init__(self):
         self.correct = 0
         self.total = 0
